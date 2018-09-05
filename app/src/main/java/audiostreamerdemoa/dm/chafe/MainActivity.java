@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
                 recyclerView.setAdapter(new RecipeAdapter(recipes));
 
-//                SnapHelper snapHelper=new PagerSnapHelper();
-//                snapHelper.attachToRecyclerView(recipRv);
             }
         });
     }
