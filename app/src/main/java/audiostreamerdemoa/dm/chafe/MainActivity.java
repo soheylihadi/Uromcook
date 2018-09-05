@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(List<Recipe> recipes) {
                 RecyclerView recyclerView=findViewById(R.id.rv_main_recipes);
+                recyclerView.setNestedScrollingEnabled(false);
                 recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
                 recyclerView.setAdapter(new RecipeAdapter(recipes));
 
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(List<Category> categories) {
                 RecyclerView categoriesRv=findViewById(R.id.rv_main_categories);
+                categoriesRv.setNestedScrollingEnabled(false);
                 categoriesRv.setLayoutManager(new LinearLayoutManager(
                         MainActivity.this,LinearLayoutManager.HORIZONTAL,false));
                 categoriesRv.setAdapter(new CategoryAdapter(categories));
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(List<Banner> banners) {
                 RecyclerView bannerRv=findViewById(R.id.rv_main_slider);
+                bannerRv.setNestedScrollingEnabled(false);
                 bannerRv.setLayoutManager(new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false));
                 bannerRv.setAdapter(new BannerAdapter(banners));
 
